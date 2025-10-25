@@ -22,7 +22,7 @@ class ItemDetailPage extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Color(0xFFF72585), Color(0xFF3A0CA3)],
+            colors: [Color(0xFffeb236), Color(0xFfff7b25)],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
@@ -33,14 +33,14 @@ class ItemDetailPage extends StatelessWidget {
             builder: (context, snap) {
               if (snap.connectionState != ConnectionState.done) {
                 return const Center(
-                  child: CircularProgressIndicator(color: Colors.white),
+                  child: CircularProgressIndicator(color: Colors.orangeAccent),
                 );
               }
               if (snap.hasError) {
                 return Center(
                   child: Text(
                     'Error: ${snap.error}',
-                    style: GoogleFonts.poppins(color: Colors.redAccent),
+                    style: GoogleFonts.allan(color: Colors.purple),
                   ),
                 );
               }
@@ -49,7 +49,7 @@ class ItemDetailPage extends StatelessWidget {
                 return Center(
                   child: Text(
                     'Item not found 🤷',
-                    style: GoogleFonts.poppins(color: Colors.white),
+                    style: GoogleFonts.allan(color: Colors.orangeAccent),
                   ),
                 );
               }
@@ -65,15 +65,15 @@ class ItemDetailPage extends StatelessWidget {
                           GestureDetector(
                             onTap: () => Navigator.pop(context),
                             child:
-                            const Icon(Icons.arrow_back_ios, color: Colors.white),
+                            const Icon(Icons.arrow_back_ios, color: Colors.orangeAccent),
                           ),
                           const SizedBox(width: 8),
                           Text(
                             'Details',
-                            style: GoogleFonts.poppins(
+                            style: GoogleFonts.allan(
                               fontSize: 22,
                               fontWeight: FontWeight.w600,
-                              color: Colors.white,
+                              color: Colors.purple,
                             ),
                           ),
                         ],
@@ -117,16 +117,16 @@ class ItemDetailPage extends StatelessWidget {
                       // Title & price
                       Text(
                         item.title,
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.allan(
                           fontSize: 26,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                          color: Colors.purple,
                         ),
                       ),
                       const SizedBox(height: 8),
                       Text(
                         '₱ ${item.price.toStringAsFixed(2)}',
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.allan(
                           fontSize: 22,
                           fontWeight: FontWeight.w500,
                           color: Colors.yellowAccent,
@@ -146,7 +146,7 @@ class ItemDetailPage extends StatelessWidget {
                           children: [
                             Text(
                               'Description',
-                              style: GoogleFonts.poppins(
+                              style: GoogleFonts.allan(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.deepPurple,
@@ -155,7 +155,7 @@ class ItemDetailPage extends StatelessWidget {
                             const SizedBox(height: 8),
                             Text(
                               item.description,
-                              style: GoogleFonts.poppins(fontSize: 14),
+                              style: GoogleFonts.allan(fontSize: 14),
                             ),
                           ],
                         ),
@@ -210,14 +210,14 @@ class ItemDetailPage extends StatelessWidget {
                             context: context,
                             builder: (_) => AlertDialog(
                               title: Text('Contact Owner',
-                                  style: GoogleFonts.poppins()),
+                                  style: GoogleFonts.allan()),
                               content: SelectableText(email,
-                                  style: GoogleFonts.poppins()),
+                                  style: GoogleFonts.allan()),
                               actions: [
                                 TextButton(
                                   onPressed: () => Navigator.pop(context),
                                   child: Text('Close',
-                                      style: GoogleFonts.poppins()),
+                                      style: GoogleFonts.allan()),
                                 ),
                               ],
                             ),
@@ -226,7 +226,7 @@ class ItemDetailPage extends StatelessWidget {
                       },
                       child: Text(
                         'Contact Owner',
-                        style: GoogleFonts.poppins(
+                        style: GoogleFonts.allan(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                           color: Colors.deepPurple,

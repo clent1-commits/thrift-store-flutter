@@ -22,7 +22,7 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget build(BuildContext context) {
     final svc = Provider.of<SupabaseService>(context, listen: false);
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.limeAccent,
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -37,8 +37,8 @@ class _SignUpPageState extends State<SignUpPage> {
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
-                        Color(0xFFF72585),
-                        Color(0xFF3A0CA3),
+                        Color(0xFF00A7B7),
+                        Color(0xFF10555B),
                       ],
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
@@ -54,7 +54,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     style: GoogleFonts.montserrat(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Colors.limeAccent,
                     ),
                   ),
                 ),
@@ -73,7 +73,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         TextField(
                           controller: _nameCtrl,
                           decoration: InputDecoration(
-                            prefixIcon: const Icon(Icons.person, color: Color(0xFF3A0CA3)),
+                            prefixIcon: const Icon(Icons.person, color: Color(0xFFA93EB9)),
                             labelText: 'Name',
                             labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
                             filled: true,
@@ -89,7 +89,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         TextField(
                           controller: _emailCtrl,
                           decoration: InputDecoration(
-                            prefixIcon: const Icon(Icons.email, color: Color(0xFF3A0CA3)),
+                            prefixIcon: const Icon(Icons.email, color: Color(0xFFA93EB9)),
                             labelText: 'Email',
                             labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
                             filled: true,
@@ -106,7 +106,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         TextField(
                           controller: _passCtrl,
                           decoration: InputDecoration(
-                            prefixIcon: const Icon(Icons.lock, color: Color(0xFF3A0CA3)),
+                            prefixIcon: const Icon(Icons.lock, color: Color(0xFFA93EB9)),
                             labelText: 'Password',
                             labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
                             filled: true,
@@ -125,7 +125,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           height: 50,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFF3A0CA3),
+                              backgroundColor: const Color(0xFFFD9248),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
@@ -188,7 +188,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   onPressed: () => Navigator.pushNamed(context, '/signin'),
                   child: Text(
                     'Already have an account? Sign In',
-                    style: GoogleFonts.montserrat(color: const Color(0xFF3A0CA3)),
+                    style: GoogleFonts.montserrat(color: const Color(0xFFF5642B)),
                   ),
                 ),
               ],

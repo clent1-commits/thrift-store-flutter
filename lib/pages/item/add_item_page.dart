@@ -68,7 +68,7 @@ class AddItemPageState extends State<AddItemPage> {
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
-          colors: [Color(0xFF7209B7), Color(0xFFFF006E)],
+          colors: [Color(0xFffeb236), Color(0xFfff7b25)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -83,8 +83,8 @@ class AddItemPageState extends State<AddItemPage> {
           elevation: 0,
           title: Text(
             '✨ Add Your Thrift',
-            style: GoogleFonts.poppins(
-                fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white),
+            style: GoogleFonts.allan(
+                fontSize: 22, fontWeight: FontWeight.bold, color: Colors.orangeAccent),
           ),
           centerTitle: true,
         ),
@@ -144,7 +144,7 @@ class AddItemPageState extends State<AddItemPage> {
                   icon: const Icon(Icons.photo_library, size: 24),
                   label: Text(
                     'Choose Photo',
-                    style: GoogleFonts.poppins(fontWeight: FontWeight.w600),
+                    style: GoogleFonts.allan(fontWeight: FontWeight.w600),
                   ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white.withOpacity(0.9),
@@ -167,7 +167,7 @@ class AddItemPageState extends State<AddItemPage> {
                       onPressed: () => setState(() => _image = null),
                       child: Text(
                         'Re-pick Image',
-                        style: GoogleFonts.poppins(color: Colors.white70),
+                        style: GoogleFonts.allan(color: Colors.orangeAccent),
                       ),
                     ),
                   ],
@@ -179,7 +179,7 @@ class AddItemPageState extends State<AddItemPage> {
                 ElevatedButton(
                   onPressed: canUpload ? _handleUpload : null,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
+                    backgroundColor: Colors.orangeAccent,
                     foregroundColor: Colors.deepPurple,
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
@@ -195,7 +195,7 @@ class AddItemPageState extends State<AddItemPage> {
                   )
                       : Text(
                     'Upload Item',
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.allan(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
