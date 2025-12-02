@@ -21,7 +21,7 @@ class _SignInPageState extends State<SignInPage> {
   Widget build(BuildContext context) {
     final svc = Provider.of<SupabaseService>(context);
     return Scaffold(
-      backgroundColor: Colors.limeAccent,
+      backgroundColor: Colors.red,
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -36,8 +36,8 @@ class _SignInPageState extends State<SignInPage> {
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
-                        Color(0xFF00A7B7), // vibrant pink
-                        Color(0xFF10555B), // deep purple
+                        Color(0xFFFF0000), // vibrant pink
+                        Color(0xFFBD0000), // deep purple
                       ],
                       begin: Alignment.centerLeft,
                       end: Alignment.centerRight,
@@ -48,7 +48,7 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                   ),
                   child: Text(
-                    '🦾 C.A.B Store',
+                    ' Sorry Sorry Store',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.abhayaLibre(
                       fontSize: 32,
@@ -71,7 +71,8 @@ class _SignInPageState extends State<SignInPage> {
                         TextField(
                           controller: _emailCtrl,
                           decoration: InputDecoration(
-                            prefixIcon: const Icon(Icons.email, color: Color(0xFFA93EB9)),
+                            prefixIcon: const Icon(Icons.email, color: Color(
+                                0xFFBD0000)),
                             labelText: 'Email',
                             labelStyle: GoogleFonts.abhayaLibre(color: Colors.grey[600]),
                             filled: true,
@@ -87,11 +88,12 @@ class _SignInPageState extends State<SignInPage> {
                         TextField(
                           controller: _passCtrl,
                           decoration: InputDecoration(
-                            prefixIcon: const Icon(Icons.lock, color: Color(0xFFA93EB9)),
+                            prefixIcon: const Icon(Icons.lock, color: Color(
+                                0xFF881111)),
                             labelText: 'Password',
-                            labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
+                            labelStyle: GoogleFonts.montserrat(color: Colors.red[600]),
                             filled: true,
-                            fillColor: Colors.grey[100],
+                            fillColor: Colors.lightBlue[100],
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12),
                               borderSide: BorderSide.none,
@@ -105,7 +107,7 @@ class _SignInPageState extends State<SignInPage> {
                           height: 50,
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFFFD9248),
+                              backgroundColor: const Color(0xFF881111),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
                               ),
@@ -126,7 +128,7 @@ class _SignInPageState extends State<SignInPage> {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(svc.error!),
-                                    backgroundColor: Colors.redAccent,
+                                    backgroundColor: Colors.red,
                                   ),
                                 );
                               }
@@ -151,7 +153,7 @@ class _SignInPageState extends State<SignInPage> {
                           child: Text(
                             'Don’t have an account? Sign Up',
                             style: GoogleFonts.abhayaLibre(
-                              color: const Color(0xFFF5642B),
+                              color: const Color(0xFFFFFFFF),
                             ),
                           ),
                         ),

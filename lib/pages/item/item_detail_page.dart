@@ -22,7 +22,7 @@ class ItemDetailPage extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Color(0xFffeb236), Color(0xFfff7b25)],
+            colors: [Color(0xfffa2929), Color(0xff881111)],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
@@ -33,14 +33,14 @@ class ItemDetailPage extends StatelessWidget {
             builder: (context, snap) {
               if (snap.connectionState != ConnectionState.done) {
                 return const Center(
-                  child: CircularProgressIndicator(color: Colors.orangeAccent),
+                  child: CircularProgressIndicator(color: Colors.red),
                 );
               }
               if (snap.hasError) {
                 return Center(
                   child: Text(
                     'Error: ${snap.error}',
-                    style: GoogleFonts.allan(color: Colors.purple),
+                    style: GoogleFonts.allan(color: Colors.red),
                   ),
                 );
               }
@@ -49,7 +49,7 @@ class ItemDetailPage extends StatelessWidget {
                 return Center(
                   child: Text(
                     'Item not found 🤷',
-                    style: GoogleFonts.allan(color: Colors.orangeAccent),
+                    style: GoogleFonts.allan(color: Colors.red),
                   ),
                 );
               }
@@ -65,15 +65,15 @@ class ItemDetailPage extends StatelessWidget {
                           GestureDetector(
                             onTap: () => Navigator.pop(context),
                             child:
-                            const Icon(Icons.arrow_back_ios, color: Colors.orangeAccent),
+                            const Icon(Icons.arrow_back_ios, color: Colors.red),
                           ),
                           const SizedBox(width: 8),
                           Text(
                             'Details',
                             style: GoogleFonts.allan(
                               fontSize: 22,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.purple,
+                                fontWeight: FontWeight.w600,
+                              color: Colors.white,
                             ),
                           ),
                         ],
@@ -120,7 +120,7 @@ class ItemDetailPage extends StatelessWidget {
                         style: GoogleFonts.allan(
                           fontSize: 26,
                           fontWeight: FontWeight.bold,
-                          color: Colors.purple,
+                          color: Colors.white,
                         ),
                       ),
                       const SizedBox(height: 8),
@@ -129,7 +129,7 @@ class ItemDetailPage extends StatelessWidget {
                         style: GoogleFonts.allan(
                           fontSize: 22,
                           fontWeight: FontWeight.w500,
-                          color: Colors.yellowAccent,
+                          color: Colors.white,
                         ),
                       ),
                       const SizedBox(height: 24),
@@ -149,7 +149,7 @@ class ItemDetailPage extends StatelessWidget {
                               style: GoogleFonts.allan(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600,
-                                color: Colors.deepPurple,
+                                color: Colors.white,
                               ),
                             ),
                             const SizedBox(height: 8),
@@ -191,7 +191,7 @@ class ItemDetailPage extends StatelessWidget {
                     right: 16,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.yellowAccent,
+                        backgroundColor: Colors.white,
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -229,7 +229,7 @@ class ItemDetailPage extends StatelessWidget {
                         style: GoogleFonts.allan(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
-                          color: Colors.deepPurple,
+                          color: Colors.white,
                         ),
                       ),
                     ),

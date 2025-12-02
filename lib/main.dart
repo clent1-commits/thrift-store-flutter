@@ -12,8 +12,8 @@ import 'pages/item/item_detail_page.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Supabase.initialize(
-    url: 'https://pibmpkksjgtopnfkfpar.supabase.co',
-    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBpYm1wa2tzamd0b3BuZmtmcGFyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEzNjI5NzgsImV4cCI6MjA3NjkzODk3OH0.tpemXz0rEPGzbrYeobQdr6vx_h64Qx8YOBZ1j26tWkQ',
+    url: 'https://dajktqhapgaeegfcgtro.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRhamt0cWhhcGdhZWVnZmNndHJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY1OTczMDEsImV4cCI6MjA2MjE3MzMwMX0.VBQg5K_ePUumQlxt3MG2YCtNkdnNcwUgqnV8rm5Yekc',
   );
   runApp(const App());
 }
@@ -34,8 +34,8 @@ class AppView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Thrift Store',
-      theme: ThemeData(primarySwatch: Colors.blue,scaffoldBackgroundColor: Colors.white,),
+      title: 'Sorry Sorry Store',
+      theme: ThemeData(primarySwatch: Colors.red,scaffoldBackgroundColor: Colors.red,),
       home: const AuthGate(),
       routes: {
         '/signin': (_) => SignInPage(),
